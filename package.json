@@ -1,33 +1,21 @@
 {
-  "name": "stu-fiit-vizdat",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vizdat",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node app.js",
-    "pack": "npx webpack --config webpack.config.js",
-    "hot-pack": "npm run pack && npm run dev"
+    "dev": "next dev -p 6532",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Drejky/STU-FIIT-VIZDAT.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Drejky/STU-FIIT-VIZDAT/issues"
-  },
-  "homepage": "https://github.com/Drejky/STU-FIIT-VIZDAT#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "three": "^0.149.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "@react-three/drei": "^9.56.28",
+    "@react-three/fiber": "^8.11.5",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.1",
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.150.1"
   }
 }
