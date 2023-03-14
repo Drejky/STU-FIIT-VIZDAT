@@ -9,27 +9,22 @@ export default function handler(req, res) {
       `ParsedData/gaze_data/FIIT_PSY_${name}.tsv`,
       'utf8'
     );
-
-    //Get all participant names for who we have data (not all from participant list)
-    let participantNames = fs.readdirSync('ParsedData/gaze_data');
-    participantNames.forEach((participant, index) => {
-      participantNames[index] = participantNames[index].replace(
-        'FIIT_PSY_',
-        ''
-      );
-      participantNames[index] = participantNames[index].replace('.tsv', '');
+    let splitData = data.split('\n');
+    const header = splitData[0].split('\t');
+    splitData.slice(1).forEach((bit, index) => {
+      let temp = bit.split('\t');
+      let newOb = {};
+      header.forEach((key, index) => {
+        newOb[key] = temp[index];
+      });
+      splitData[index] = newOb;
     });
-    console.log(participantNames);
-    // let seq = data.split('\n');
-    // seq.forEach((seqq, index) => {
-    //   const splitted = seqq.split('\t');
-    //   seq[index] = {
-    //     name: splitted[0],
-    //     order: seqq.slice(2).split('\t'),
-    //   };
-    // });
 
-    res.status(200).json({ name: 'Helo world' });
+    splitData = splitData.slice(0, splitData.length - 1);
+
+    // console.log(splitData);
+
+    res.status(200).json(splitData);
   } catch (err) {
     console.error(err);
     res.status(404);
