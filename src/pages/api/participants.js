@@ -2,7 +2,6 @@
 
 import * as fs from 'fs';
 import path from 'path';
-import * as dfd from 'danfojs-node';
 
 // Age:	1:< 20	2:21-22	3:23-24	4:25-26	5:27-28	6:29-30	7:>30	-1:Not Set
 // all:	1:y	2:n	-1:Not Set
@@ -23,9 +22,6 @@ export default function handler(req, res) {
         gender: splitted[4][0],
       };
     });
-    // let df = new dfd.DataFrame(participants);
-    // df.print();
-    console.log(participants);
     res.status(200).json(participants);
   } catch (err) {
     console.error(err);
