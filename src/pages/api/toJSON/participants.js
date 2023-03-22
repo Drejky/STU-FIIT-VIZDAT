@@ -22,6 +22,14 @@ export default function handler(req, res) {
         gender: splitted[4][0],
       };
     });
+
+    let a = [];
+    participants.forEach((name) => a.push(name.name));
+    console.log(
+      a.filter((value, index, array) => array.indexOf(value) !== index)
+    );
+    console.log(participants.length);
+
     res.status(200).json(participants);
   } catch (err) {
     console.error(err);

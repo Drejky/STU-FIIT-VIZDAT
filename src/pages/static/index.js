@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Inter, Leckerli_One } from 'next/font/google';
 import styles from './index.module.css';
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import {
   Chart as ChartJS,
@@ -29,7 +29,17 @@ ChartJS.register(
 export default function graphPage(props) {
   const [data, setData] = useState(props.participants);
   const [filteredData, setFilteredData] = useState(props.participants);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
   let sliderRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (sideBarOpen) {
+      containerRef.current.style.widht = 'block';
+    } else {
+      containerRef.current.style.widht = 'none';
+    }
+  }, [sideBarOpen]);
 
   const options = {
     responsive: true,
@@ -80,9 +90,13 @@ export default function graphPage(props) {
     //   )
     // );
   };
+  const handleSidebarSwitch = () => {
+    if (sideBarOpen) setSideBarOpen(false);
+    else setSideBarOpen(true);
+  };
   return (
     <div className={styles.container}>
-      <div className={styles.inputWrapper}>
+      <div className={styles.inputWrapper} ref={containerRef}>
         <input
           type="range"
           min={0}
@@ -90,6 +104,9 @@ export default function graphPage(props) {
           ref={sliderRef}
           onMouseUp={handleSlider}
         ></input>
+        <button onClick={handleSidebarSwitch} className={styles.sidebarButton}>
+          Open sidebar
+        </button>
       </div>
       <div>
         <Bar
