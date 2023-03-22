@@ -1,18 +1,18 @@
+.pageWrapper {
+  display: flex;
+}
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 33vh 34vh 33vh;
-  transition: 0.5s;
+  display: flex;
 }
 
 .inputWrapper {
+  transition: 0.5s;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
   gap: 1rem;
   padding: 2rem;
-}
-
-.sidebarButton {
 }
 
 .barGraph {

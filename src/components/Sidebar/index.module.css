@@ -1,0 +1,18 @@
+.sidebarButton {
+  position: absolute;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: blue;
+  top: 50%;
+  left: -0.5%;
+  rotate: 270deg;
+  border: none;
+  width: 5rem;
+}
+
+.sidebar {
+  position: relative;
+  width: 35rem;
+  height: 100vh;
+  background-color: blue;
+}

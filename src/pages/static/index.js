@@ -5,6 +5,7 @@ import styles from './index.module.css';
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -31,15 +32,6 @@ export default function graphPage(props) {
   const [filteredData, setFilteredData] = useState(props.participants);
   const [sideBarOpen, setSideBarOpen] = useState(false);
   let sliderRef = useRef(null);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (sideBarOpen) {
-      containerRef.current.style.widht = 'block';
-    } else {
-      containerRef.current.style.widht = 'none';
-    }
-  }, [sideBarOpen]);
 
   const options = {
     responsive: true,
@@ -82,44 +74,23 @@ export default function graphPage(props) {
     ],
   };
 
-  const handleSlider = (event) => {
-    // setFilteredData(
-    //   data.filter(
-    //     (gazeEvent) =>
-    //       gazeEvent.GazeEventDuration < parseInt(event.target.value)
-    //   )
-    // );
-  };
-  const handleSidebarSwitch = () => {
-    if (sideBarOpen) setSideBarOpen(false);
-    else setSideBarOpen(true);
-  };
   return (
-    <div className={styles.container}>
-      <div className={styles.inputWrapper} ref={containerRef}>
-        <input
-          type="range"
-          min={0}
-          max={500}
-          ref={sliderRef}
-          onMouseUp={handleSlider}
-        ></input>
-        <button onClick={handleSidebarSwitch} className={styles.sidebarButton}>
-          Open sidebar
-        </button>
-      </div>
-      <div>
-        <Bar
-          options={options}
-          data={graphData}
-          className={styles.barGraph}
-        ></Bar>
-      </div>
-      <div>
-        {/* {filteredData.map((participant, index) => {
+    <div className={styles.pageWrapper}>
+      <Sidebar />
+      <div className={styles.container}>
+        <div>
+          <Bar
+            options={options}
+            data={graphData}
+            className={styles.barGraph}
+          ></Bar>
+        </div>
+        <div>
+          {/* {filteredData.map((participant, index) => {
           return <p key={index}>{participant.name}</p>;
         })} */}
-        foo
+          foo
+        </div>
       </div>
     </div>
   );
