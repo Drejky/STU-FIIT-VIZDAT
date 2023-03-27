@@ -1,0 +1,16 @@
+AOI name: grey_monitor
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+688	273
+879	273
+879	451
+688	451
+
+

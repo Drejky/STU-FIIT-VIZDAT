@@ -1,0 +1,48 @@
+AOI name: ball1
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+-7	837
+146	837
+146	975
+-7	975
+
+
+AOI name: ball2
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+1309	-15
+1473	-15
+1473	102
+1309	102
+
+
+AOI name: ball3
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+295	466
+478	466
+478	609
+295	609
+
+

@@ -1,0 +1,16 @@
+AOI name: purple_rect
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+1135	704
+1335	704
+1335	877
+1135	877
+
+

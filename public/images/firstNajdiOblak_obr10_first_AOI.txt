@@ -1,0 +1,64 @@
+AOI name: cloud1
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+710	408
+826	408
+826	486
+710	486
+
+
+AOI name: cloud2
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+862	177
+1003	177
+1003	317
+862	317
+
+
+AOI name: cloud3
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: False
+
+X	Y
+
+-69	816
+113	816
+113	1009
+-69	1009
+
+
+AOI name: cloud4
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+108	127
+286	127
+286	269
+108	269
+
+

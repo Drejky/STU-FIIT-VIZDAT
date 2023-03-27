@@ -19,7 +19,7 @@ export default function Home() {
         <Link className={styles.link} href="/graph">
           Test
         </Link>
-        <Link className={styles.link} href="/graph">
+        <Link className={styles.link} href="/static">
           K3
         </Link>
       </div>

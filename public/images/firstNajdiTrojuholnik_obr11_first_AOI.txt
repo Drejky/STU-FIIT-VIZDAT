@@ -1,0 +1,64 @@
+AOI name: triangle1
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+1052	53
+1208	53
+1208	177
+1052	177
+
+
+AOI name: triangle2
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+1260	844
+1412	844
+1412	980
+1260	980
+
+
+AOI name: triangle4
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+324	539
+444	539
+444	637
+324	637
+
+
+AOI name: triangle5
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+-10	703
+126	703
+126	842
+-10	842
+
+

@@ -1,0 +1,16 @@
+AOI name: AOI
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+123	809
+185	809
+185	861
+123	861
+
+

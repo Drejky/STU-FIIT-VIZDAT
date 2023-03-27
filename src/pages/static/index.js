@@ -27,12 +27,7 @@ ChartJS.register(
 );
 
 // const inter = Inter({ subsets: ['latin'] });
-export default function graphPage(props) {
-  const [data, setData] = useState(props.participants);
-  const [filteredData, setFilteredData] = useState(props.participants);
-  const [sideBarOpen, setSideBarOpen] = useState(false);
-  let sliderRef = useRef(null);
-
+export default function graphPage({ emotions, presentSeq }) {
   const options = {
     responsive: true,
     plugins: {
@@ -52,22 +47,22 @@ export default function graphPage(props) {
       {
         label: 'Female',
         data: [
-          props.positive.female,
-          props.neutral.female,
-          props.positiveMusic.female,
-          props.unknown.female,
-          props['4'].female,
+          emotions.positive.female,
+          emotions.neutral.female,
+          emotions.positiveMusic.female,
+          emotions.unknown.female,
+          emotions['4'].female,
         ],
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
         label: 'Male',
         data: [
-          props.positive.male,
-          props.neutral.male,
-          props.positiveMusic.male,
-          props.unknown.male,
-          props['4'].male,
+          emotions.positive.male,
+          emotions.neutral.male,
+          emotions.positiveMusic.male,
+          emotions.unknown.male,
+          emotions['4'].male,
         ],
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
@@ -76,7 +71,7 @@ export default function graphPage(props) {
 
   return (
     <div className={styles.pageWrapper}>
-      <Sidebar />
+      <Sidebar images={presentSeq}></Sidebar>
       <div className={styles.container}>
         <div>
           <Bar
@@ -97,10 +92,16 @@ export default function graphPage(props) {
 }
 
 export async function getStaticProps(ctx) {
-  const res = await fetch('http://127.0.0.1:6532/api/emotionCount');
-  if (!res.ok) throw new Error('Error fetching sites props');
-  const parsedRes = await res.json();
+  const emotionCount = await fetch('http://127.0.0.1:6532/api/emotionCount');
+  if (!emotionCount.ok) throw new Error('Error fetching sites props');
+  const presentSeq = await fetch('http://127.0.0.1:6532/api/toJSON/presentSeq');
+  if (!presentSeq.ok) throw new Error('Error fetching sites props');
+  const parsedEmotionCount = await emotionCount.json();
+  const parsedpresentSeq = await presentSeq.json();
   return {
-    props: parsedRes,
+    props: {
+      emotions: parsedEmotionCount,
+      presentSeq: parsedpresentSeq,
+    },
   };
 }

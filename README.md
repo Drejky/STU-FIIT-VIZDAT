@@ -17,3 +17,7 @@ yarn dev
 ## Preparing data
 
 ### images
+
+# What i did with data
+
+put images folder in public and renamed two images that had incorrect name mapping

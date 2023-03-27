@@ -1,0 +1,16 @@
+AOI name: dog
+
+Number of Keyframes: 1
+Number of Vertices: 4
+
+Keyframe timestamp = 00:00:00.000
+Active: True
+
+X	Y
+
+1088	725
+1430	725
+1430	968
+1088	968
+
+
