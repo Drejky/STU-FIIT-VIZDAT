@@ -9,6 +9,7 @@ export default function handler(req, res) {
     const removeInRegex = new RegExp('^(?!in).+', 'g');
     seq.forEach((seqq, index) => {
       const splitted = seqq.split('\t');
+      //@ts-ignore
       seq[index] = {
         name: splitted[0],
         order: seqq
@@ -19,7 +20,6 @@ export default function handler(req, res) {
       };
     });
     seq.pop();
-    seq.forEach((ob) => console.log(ob.order));
 
     seq = seq.filter((ob) => ob);
 

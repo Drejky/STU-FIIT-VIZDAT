@@ -11,9 +11,10 @@
   "dependencies": {
     "@react-three/drei": "^9.56.28",
     "@react-three/fiber": "^8.11.5",
-    "chart.js": "^4.2.1",
+    "chart.js": "^4.3.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.1",
+    "lodash": "^4.17.21",
     "next": "13.2.1",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",

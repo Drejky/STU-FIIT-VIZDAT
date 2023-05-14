@@ -8,11 +8,13 @@
   rotate: 270deg;
   border: none;
   width: 5rem;
+  z-index: 1;
 }
 
 .sidebar {
   width: 35rem;
   height: 100vh;
+  padding-right: 1rem;
   /* background-color: darkblue; */
   /* padding: 2rem; */
   display: grid;
@@ -30,7 +32,7 @@
   overflow: hidden;
   position: absolute;
   margin: 2rem;
-  margin-bottom: rem;
+  margin-bottom: 25rem;
   left: 15rem;
   content: '';
   width: 1rem;

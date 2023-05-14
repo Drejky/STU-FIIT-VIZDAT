@@ -4,7 +4,6 @@
 /node_modules
 /ParsedData
 /Data
-*.pdf
 *.docx
 /.pnp
 .pnp.js

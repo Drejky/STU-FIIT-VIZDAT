@@ -17,12 +17,11 @@ export default function handler(req, res) {
       header.forEach((key, index) => {
         newOb[key] = temp[index];
       });
+      //@ts-ignore
       splitData[index] = newOb;
     });
 
     splitData = splitData.slice(0, splitData.length - 1);
-
-    // console.log(splitData);
 
     res.status(200).json(splitData);
   } catch (err) {

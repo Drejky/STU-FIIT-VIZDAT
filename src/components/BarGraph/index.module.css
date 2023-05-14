@@ -1,0 +1,10 @@
+.barGraph {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  color: black;
+}
+.container {
+  display: flex;
+}

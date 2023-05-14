@@ -10,8 +10,6 @@ export default function handler(req, res) {
     fileNames.forEach(
       (fileName, index) => (fileNames[index] = fileName.replace('_AOI.txt', ''))
     );
-    console.log(fileNames);
-    console.log(images.filter((image) => image.match(bmpRegex)).length);
     res.status(200).json(images.filter((image) => image.match(bmpRegex)));
   } catch (err) {
     console.error(err);

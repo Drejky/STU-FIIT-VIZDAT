@@ -1,8 +1,7 @@
 .pageWrapper {
   display: flex;
-}
-.container {
-  display: flex;
+  gap: 1rem;
+  height: 100vh;
 }
 
 .inputWrapper {
@@ -15,10 +14,7 @@
   padding: 2rem;
 }
 
-.barGraph {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 0;
-  grid-row-end: 1;
-  color: black;
+.canvas {
+  width: 100%;
+  height: 100%;
 }
